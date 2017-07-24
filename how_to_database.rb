@@ -12,6 +12,10 @@ db = SQLite3::Database.new('chinook.db')
 
 sql = 'SELECT * FROM artists;'
 db.execute(sql)
+[
+  [1, 'alex', 'griffith'],
+  [2, 'neil']
+]
 
 more_sql = <<-SQL
 SELECT * from tracks

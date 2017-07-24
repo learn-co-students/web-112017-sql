@@ -47,20 +47,37 @@ Destroy
 
 7. How would you return fans that are not fans of the black eyed peas.
   ```sql
-
+  SELECT * from fans where artist_id != 169
   ```
 8. Display an artists name next to their album
 ```sql
-
+SELECT artists.name, albums.title from artists
+INNER JOIN albums
+ON albums.ArtistId = artists.ArtistId
 ```
 
 9. Display artist name, album name and number of tracks
 ```sql
+SELECT artists.name as artist_name, albums.title as album_title, COUNT(tracks.name) as track_name FROM artists
+JOIN albums
+ON albums.ArtistId = artists.ArtistId
+JOIN tracks
+ON tracks.AlbumId = albums.AlbumId
+GROUP BY (albums.AlbumId);
+
 
 ```
 
-10.  How would you return all of the artists in the 'Pop' Genre
+10.  How would you return the name of all of the artists in the 'Pop' Genre
   ```sql
+SELECT DISTINCT artists.name  FROM artists
+JOIN albums
+ON albums.ArtistId = artists.ArtistId
+JOIN tracks
+ON tracks.AlbumId = albums.AlbumId
+JOIN genres
+ON genres.GenreId = tracks.GenreId
+WHERE genres.name = 'Pop'
 
   ```
 
