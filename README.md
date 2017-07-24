@@ -49,17 +49,17 @@ Destroy
   ```sql
 
   ```
-8. Display an artists name next to their album
+8. Display an artists name next to their album title
 ```sql
 
 ```
 
-9. Display artist name, album name and number of tracks
+9. Display artist name, album name and number of tracks on that album
 ```sql
 
 ```
 
-10.  How would you return all of the artists in the 'Pop' Genre
+10.  How would you return the name of all of the artists in the 'Pop' Genre
   ```sql
 
   ```
