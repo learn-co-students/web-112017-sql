@@ -1,4 +1,4 @@
-#Intro to SQL
+# Intro to SQL
 
 1. Install the SQLite Browser if you haven't already [here](http://sqlitebrowser.org/)
 2. Open the SQLite Browser and click 'File -> Open DataBase'
