@@ -49,14 +49,14 @@ Destroy
   ```sql
   SELECT * from fans where artist_id != 169
   ```
-8. Display an artists name next to their album
+8. Display an artists name next to their album title
 ```sql
 SELECT artists.name, albums.title from artists
 INNER JOIN albums
 ON albums.ArtistId = artists.ArtistId
 ```
 
-9. Display artist name, album name and number of tracks
+9. Display artist name, album name and number of tracks on that album
 ```sql
 SELECT artists.name as artist_name, albums.title as album_title, COUNT(tracks.name) as track_name FROM artists
 JOIN albums
